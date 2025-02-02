@@ -1,0 +1,45 @@
+!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorienrechner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalorienrechner – Gesamtumsatz berechnen</h1>
+        <form id="kalorienForm">
+            <label for="geschlecht">Geschlecht:</label>
+            <select id="geschlecht">
+                <option value="m">Männlich</option>
+                <option value="w">Weiblich</option>
+            </select>
+
+            <label for="gewicht">Gewicht (kg):</label>
+            <input type="number" id="gewicht" required>
+
+            <label for="groesse">Größe (cm):</label>
+            <input type="number" id="groesse" required>
+
+            <label for="alter">Alter (Jahre):</label>
+            <input type="number" id="alter" required>
+
+            <label for="aktivitaet">Aktivitätslevel:</label>
+            <select id="aktivitaet">
+                <option value="1.2">Kaum Bewegung</option>
+                <option value="1.375">Leicht aktiv (1-3x Sport/Woche)</option>
+                <option value="1.55">Mäßig aktiv (3-5x Sport/Woche)</option>
+                <option value="1.725">Sehr aktiv (6-7x Sport/Woche)</option>
+                <option value="1.9">Extrem aktiv (tägliches Training)</option>
+            </select>
+
+            <button type="button" onclick="berechneKalorien()">Berechnen</button>
+        </form>
+
+        <h2 id="ergebnis"></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
