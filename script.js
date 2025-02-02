@@ -18,8 +18,10 @@ function berechneKalorien() {
         grundumsatz = 10 * gewicht + 6.25 * groesse - 5 * alter - 161;
     }
 
+    let leistungsumsatz = grundumsatz * (aktivitaet - 1);
     let gesamtumsatz = grundumsatz * aktivitaet;
-    
-    document.getElementById("ergebnis").innerHTML = 
-        `Dein Gesamtumsatz beträgt ca. <strong>${gesamtumsatz.toFixed(2)}</strong> kcal pro Tag.`;
+
+    document.getElementById("grundumsatz").innerHTML = `Grundumsatz: <strong>${grundumsatz.toFixed(2)}</strong> kcal`;
+    document.getElementById("leistungsumsatz").innerHTML = `Leistungsumsatz: <strong>${leistungsumsatz.toFixed(2)}</strong> kcal`;
+    document.getElementById("gesamtumsatz").innerHTML = `Gesamtumsatz: <strong>${gesamtumsatz.toFixed(2)}</strong> kcal`;
 }
